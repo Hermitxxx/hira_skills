@@ -43,6 +43,7 @@ You are **not** writing a dry user manual or an IT technician document. You are 
    - Option 2: `"Your [Device] [feature / connection] should now be working completely back to normal!"`
    - Option 3: `"If none of these software solutions solved the problem, it's most likely an internal hardware issue with your [Device]..."`
    - Option 4: `"And that's pretty much all there is to [action / fixing problem] on your [Device]!"`
+   - Option 5: `"If this guide helped you out, hit that like button and subscribe for more fast [Device] tips..."`
 
 *(Note: Always dynamically replace `[Device]`, `[problem]`, `[goal]`, etc. with the real keywords from the user's request before calling `ask_question`).*
 
@@ -184,7 +185,7 @@ Never output standalone filler lines without an action (e.g., `Look at the right
 
 ---
 
-## 5. The 4 Intro & Outro Hook Systems (First-Line Formulas)
+## 5. The Intro & Outro Hook Systems (First-Line Formulas)
 
 ### A. YouTube Title Ideas (Chat Output Only)
 Provide 3 punchy, high-CTR titles in your chat output (never inside the `.docx` document):
@@ -238,7 +239,7 @@ Between steps, talk directly to the viewer, acknowledging what was just done and
 
 ---
 
-### D. The 4 Keyword-Anchored Outro Hooks (Under 12 Seconds)
+### D. The 5 Keyword-Anchored Outro Hooks (Under 12 Seconds)
 
 #### Outro Option 1: *"And that's how you can easily [fix problem / configure setting] on your [Device]!"*
 * **Full Spoken Delivery:**
@@ -262,6 +263,11 @@ Between steps, talk directly to the viewer, acknowledging what was just done and
 * **Full Spoken Delivery:**
   - *Line 1:* *"And that's pretty much all there is to **[action / fixing problem]** on your **[Device]**!"*
   - *Line 2:* *"If this video got the job done for you, hit that like button, subscribe for more quick tutorials, and I'll see you in the next one!"*
+
+#### Outro Option 5: *"If this guide helped you out, hit that like button and subscribe for more fast [Device] tips..."*
+* **Full Spoken Delivery:**
+  - *Line 1:* *"If this guide helped you out, hit that like button and subscribe for more fast **[Device / Windows 11]** tips."*
+  - *Line 2:* *"Thanks for watching, and I'll catch you in the next one!"*
 
 ---
 
@@ -553,9 +559,9 @@ Whenever the user requests a new script under `tech-vid-script-v3`:
 
 2. **Dual Deliverables Post-Selection:**
    - **Chat Output:** Provide 3 high-CTR title ideas, followed by the complete conversational voiceover script with bold UI targets, concise sub-steps, and mid-step escalation bridges, ending with the clickable document link.
-   - **Microsoft Word Document (`.docx`):** Automatically compile the script to a clean `.docx` file in `<workspace>\<Topic Name>.docx` using the bundled PowerShell script:
+   - **Microsoft Word Document (`.docx`):** Automatically compile the script to a clean `.docx` file in `c:\HIRA SCRIPTS\<Topic Name>.docx` using the PowerShell script:
      ```powershell
-     powershell -NoProfile -ExecutionPolicy Bypass -File "<skill-dir>\scripts\build_script_docx.ps1" -OutputFile "<workspace>\<Topic Name>.docx" -InputFile "$env:TEMP\script_input.txt"
+     powershell -NoProfile -ExecutionPolicy Bypass -File "c:\HIRA SCRIPTS\.agents\skills\tech-vid-script-v3\scripts\build_script_docx.ps1" -OutputFile "c:\HIRA SCRIPTS\<Topic Name>.docx" -InputFile "$env:TEMP\script_input.txt"
      ```
 
 3. **Zero Titles Inside the Document (STRICT):**
